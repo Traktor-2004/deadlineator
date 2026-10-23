@@ -1,0 +1,10 @@
+stages:
+  - test
+
+test-on-local-runner:
+  stage: test
+  tags:
+    - local-windows
+  script:
+    - py -3 --version
+    - py -3 -m unittest discover -s tests -v

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#172554">
+    <title>Дедлайнатор — планер команды</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">Д</div>
+      <div>
+        <p class="eyebrow">КОМАНДНЫЙ ПЛАНЕР</p>
+        <h1>Дедлайнатор</h1>
+      </div>
+      <p class="topbar-note">Все дедлайны в одном месте</p>
+    </header>
+
+    <main class="page-shell">
+      <section class="intro" aria-labelledby="intro-title">
+        <div>
+          <p class="eyebrow">ПРОЕКТ «СЕССИЯ БЕЗ ПАНИКИ»</p>
+          <h2 id="intro-title">Что делаем дальше?</h2>
+          <p class="intro-copy">Добавляйте задачи и двигайте их по доске. Данные хранятся на этом компьютере.</p>
+        </div>
+        <form id="task-form" class="task-form">
+          <label>Название задачи<input name="title" maxlength="120" required placeholder="Например, подготовить демо"></label>
+          <label>Срок<input name="due_date" type="date" required></label>
+          <label>Приоритет<select name="priority"><option value="medium">Обычный</option><option value="high">Высокий</option><option value="low">Низкий</option></select></label>
+          <label>Команда<select name="team"><option>Core</option><option>Web</option><option>QA</option></select></label>
+          <label class="wide-field">Короткое описание<textarea name="description" maxlength="1000" rows="2" placeholder="Контекст, критерии готовности или блокер"></textarea></label>
+          <button type="submit">Добавить задачу</button>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="board" aria-label="Доска задач">
+        <div class="board-column" data-status="backlog">
+          <div class="column-heading"><h3>Бэклог</h3><span class="count">0</span></div>
+          <div class="task-list" id="backlog-list"></div>
+        </div>
+        <div class="board-column" data-status="in_progress">
+          <div class="column-heading"><h3>В работе</h3><span class="count">0</span></div>
+          <div class="task-list" id="in-progress-list"></div>
+        </div>
+        <div class="board-column" data-status="done">
+          <div class="column-heading"><h3>Готово</h3><span class="count">0</span></div>
+          <div class="task-list" id="done-list"></div>
+        </div>
+      </section>
+      <p id="board-message" class="board-message" role="status" aria-live="polite"></p>
+    </main>
+    <footer class="footer">Учебный проект • локальный запуск • без внешних сервисов</footer>
+  </body>
+</html>

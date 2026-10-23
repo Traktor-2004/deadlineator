@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дедлайнатор — квартальный план Q4 2026</title>
+  <style>
+    :root { color-scheme: dark; --bg:#10131c; --panel:#171c28; --line:#293246; --muted:#a6b0c4; --text:#f3f6fc; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:radial-gradient(circle at 20% 0,#1c2940 0,transparent 36rem),var(--bg); color:var(--text); font:15px/1.5 "Segoe UI",system-ui,sans-serif; }
+    main { max-width:1500px; margin:0 auto; padding:38px 28px 48px; }
+    .eyebrow { color:#8ba7ff; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { margin:8px 0 8px; font-size:clamp(28px,4vw,44px); line-height:1.1; }
+    .intro { max-width:760px; margin:0; color:var(--muted); }
+    .summary { display:flex; gap:10px; flex-wrap:wrap; margin:24px 0; }
+    .pill { padding:8px 12px; border:1px solid #34405a; border-radius:999px; background:#161d2a; color:#d7e0f5; font-size:13px; }
+    .card { overflow:hidden; border:1px solid #2a3448; border-radius:18px; background:linear-gradient(145deg,#171d29,#121722); box-shadow:0 18px 50px #0004; }
+    .chart-head { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px 22px; border-bottom:1px solid var(--line); }
+    .chart-head h2 { margin:0; font-size:17px; }
+    .legend { display:flex; flex-wrap:wrap; gap:14px; color:#c5cee0; font-size:12px; }
+    .legend span { display:inline-flex; align-items:center; gap:7px; }
+    .dot { width:9px; height:9px; border-radius:3px; display:inline-block; }
+    .scroll { overflow-x:auto; }
+    svg { display:block; width:100%; min-width:1120px; height:auto; }
+    .task { font-size:13px; fill:#eaf0fc; }
+    .team { font-size:11px; fill:#aab6cc; }
+    .week { font-size:11px; fill:#aab6cc; }
+    .sprint { font-size:12px; font-weight:800; fill:#dfe7f8; }
+    .bar-label { font-size:11px; font-weight:800; fill:#fff; pointer-events:none; }
+    .foot { display:grid; grid-template-columns:1.15fr 1fr; gap:18px; padding:18px 22px 22px; }
+    .foot h3 { margin:0 0 8px; font-size:14px; }
+    .foot p,.foot li { color:var(--muted); font-size:13px; }
+    .foot p { margin:0; }
+    .foot ul { margin:0; padding-left:18px; }
+    @media(max-width:760px){main{padding:26px 16px}.chart-head{align-items:flex-start;flex-direction:column}.foot{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Дедлайнатор · планирование разработки</div>
+  <h1>Квартальный план Q4 2026</h1>
+  <p class="intro">Четыре двухнедельных спринта с общим потоком работ Core, Web и QA. Полосы показывают плановые окна выполнения, а подписи — связанные карточки задач.</p>
+  <div class="summary">
+    <span class="pill">12 октября — 6 декабря 2026</span>
+    <span class="pill">4 спринта · 8 недель</span>
+    <span class="pill">3 учебные команды</span>
+    <span class="pill">10 карточек · зависимости между командами</span>
+  </div>
+  <section class="card" aria-label="Диаграмма Ганта квартального плана">
+    <div class="chart-head">
+      <h2>Диаграмма Ганта</h2>
+      <div class="legend">
+        <span><i class="dot" style="background:#6d8cff"></i>Core</span>
+        <span><i class="dot" style="background:#a77bff"></i>Web</span>
+        <span><i class="dot" style="background:#36c6b2"></i>QA</span>
+        <span><i class="dot" style="background:#ffb454"></i>Все команды</span>
+      </div>
+    </div>
+    <div class="scroll">
+      <svg viewBox="0 0 1440 770" role="img" aria-labelledby="title desc">
+        <title id="title">План работ Дедлайнатора на четыре спринта</title>
+        <desc id="desc">Диаграмма Ганта с задачами Core, Web и QA, распределёнными по четырём спринтам с 12 октября по 6 декабря 2026 года.</desc>
+        <defs>
+          <pattern id="stripe" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#ffb454"/><rect width="3" height="8" fill="#ffd18e"/></pattern>
+        </defs>
+        <rect x="0" y="0" width="1440" height="770" fill="#121722"/>
+        <rect x="400" y="84" width="250" height="630" fill="#23304a" opacity=".42"/>
+        <rect x="650" y="84" width="250" height="630" fill="#202b3b" opacity=".38"/>
+        <rect x="900" y="84" width="250" height="630" fill="#23304a" opacity=".42"/>
+        <rect x="1150" y="84" width="250" height="630" fill="#202b3b" opacity=".38"/>
+        <text x="412" y="28" class="sprint">SPRINT 1 · ОСНОВА</text>
+        <text x="412" y="48" class="week">12–25 октября</text>
+        <text x="662" y="28" class="sprint">SPRINT 2 · СЕРВИС</text>
+        <text x="662" y="48" class="week">26 октября – 8 ноября</text>
+        <text x="912" y="28" class="sprint">SPRINT 3 · ИНТЕГРАЦИЯ</text>
+        <text x="912" y="48" class="week">9–22 ноября</text>
+        <text x="1162" y="28" class="sprint">SPRINT 4 · ЗАВЕРШЕНИЕ</text>
+        <text x="1162" y="48" class="week">23 ноября – 6 декабря</text>
+        <text x="24" y="70" class="week">Задача / команда</text>
+        <g stroke="#344057" stroke-width="1">
+          <path d="M400 84V714M525 84V714M650 84V714M775 84V714M900 84V714M1025 84V714M1150 84V714M1275 84V714M1400 84V714"/>
+          <path d="M0 84H1400M0 147H1400M0 210H1400M0 273H1400M0 336H1400M0 399H1400M0 462H1400M0 525H1400M0 588H1400M0 651H1400M0 714H1400"/>
+        </g>
+        <g class="week" text-anchor="middle">
+          <text x="462" y="70">12 окт</text><text x="587" y="70">19 окт</text><text x="712" y="70">26 окт</text><text x="837" y="70">2 ноя</text>
+          <text x="962" y="70">9 ноя</text><text x="1087" y="70">16 ноя</text><text x="1212" y="70">23 ноя</text><text x="1337" y="70">30 ноя</text>
+        </g>
+        <g class="task">
+          <text x="24" y="112">I01 · Сценарии и API-контракт</text><text x="24" y="130" class="team">Core + QA</text>
+          <text x="24" y="175">I02 · Модель и валидация</text><text x="24" y="193" class="team">Core</text>
+          <text x="24" y="238">I05 · Форма и доска</text><text x="24" y="256" class="team">Web</text>
+          <text x="24" y="301">I03 · JSON-хранилище</text><text x="24" y="319" class="team">Core</text>
+          <text x="24" y="364">I04 · HTTP API</text><text x="24" y="382" class="team">Core</text>
+          <text x="24" y="427">I07 · Модульные тесты</text><text x="24" y="445" class="team">QA + Core</text>
+          <text x="24" y="490">I06 · Интеграция UI/API</text><text x="24" y="508" class="team">Web</text>
+          <text x="24" y="553">I08 · Регрессионная проверка</text><text x="24" y="571" class="team">QA</text>
+          <text x="24" y="616">I09 · Pipeline на Runner</text><text x="24" y="634" class="team">Core + QA</text>
+          <text x="24" y="679">I10 · Демонстрация</text><text x="24" y="697" class="team">Все команды</text>
+        </g>
+        <g>
+          <rect x="405" y="97" width="82" height="28" rx="8" fill="#6d8cff"><title>I01: уточнение сценариев и контракта API, 12–16 октября</title></rect><text x="417" y="115" class="bar-label">12–16 окт</text>
+          <rect x="530" y="160" width="82" height="28" rx="8" fill="#6d8cff"><title>I02: модель и валидация, 19–23 октября; зависит от I01</title></rect><text x="542" y="178" class="bar-label">19–23 окт</text>
+          <rect x="530" y="223" width="82" height="28" rx="8" fill="#a77bff"><title>I05: прототип формы и доски, 19–23 октября; согласуется по I01</title></rect><text x="542" y="241" class="bar-label">19–23 окт</text>
+          <rect x="655" y="286" width="82" height="28" rx="8" fill="#6d8cff"><title>I03: локальное JSON-хранилище, 26–30 октября</title></rect><text x="667" y="304" class="bar-label">26–30 окт</text>
+          <rect x="780" y="349" width="82" height="28" rx="8" fill="#6d8cff"><title>I04: HTTP API, 2–6 ноября; зависит от I03</title></rect><text x="792" y="367" class="bar-label">2–6 ноя</text>
+          <rect x="780" y="412" width="82" height="28" rx="8" fill="#36c6b2"><title>I07: модульные тесты, 2–6 ноября; параллельно с I04</title></rect><text x="792" y="430" class="bar-label">2–6 ноя</text>
+          <rect x="905" y="475" width="82" height="28" rx="8" fill="#a77bff"><title>I06: интеграция интерфейса и API, 9–13 ноября; зависит от I04 и I05</title></rect><text x="917" y="493" class="bar-label">9–13 ноя</text>
+          <rect x="1030" y="538" width="82" height="28" rx="8" fill="#36c6b2"><title>I08: регрессия, 16–20 ноября; зависит от I06</title></rect><text x="1042" y="556" class="bar-label">16–20 ноя</text>
+          <rect x="905" y="601" width="207" height="28" rx="8" fill="url(#stripe)"><title>I09: локальный pipeline и runner, 9–20 ноября; зависит от I07</title></rect><text x="917" y="619" class="bar-label">9–20 ноя · I07 → CI</text>
+          <rect x="1155" y="664" width="82" height="28" rx="8" fill="#ffb454"><title>I10: демонстрация проекта, 23–27 ноября; зависит от I08 и I09</title></rect><text x="1167" y="682" class="bar-label">23–27 ноя</text>
+        </g>
+        <g fill="#f2f5fb" stroke="#121722" stroke-width="3">
+          <path d="M650 132l8 8-8 8-8-8z"><title>Обзор Sprint 1 — 25 октября</title></path>
+          <path d="M900 132l8 8-8 8-8-8z"><title>Обзор Sprint 2 — 8 ноября</title></path>
+          <path d="M1150 132l8 8-8 8-8-8z"><title>Обзор Sprint 3 — 22 ноября</title></path>
+          <path d="M1400 132l8 8-8 8-8-8z"><title>Обзор Sprint 4 — 6 декабря</title></path>
+        </g>
+        <text x="410" y="739" class="week">◇ Обзор спринта · полосатая задача CI выполняется параллельно с проверками QA</text>
+      </svg>
+    </div>
+    <div class="foot">
+      <div><h3>Зависимости между командами</h3><ul><li>I01 задаёт общий контракт для Core, Web и QA.</li><li>I06 начинается после I04 и опирается на прототип I05.</li><li>I08 проверяет интеграцию I06; I10 зависит от I08 и I09.</li></ul></div>
+      <div><h3>Примечание к плану</h3><p>Даты и распределение — учебный план. Core, Web и QA обозначают зоны ответственности, реальные участники не назначены. Сроки уточняются на обзоре каждого спринта.</p></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

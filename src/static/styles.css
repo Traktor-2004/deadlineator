@@ -1,0 +1,89 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #172033;
+  background: #f3f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px max(24px, calc((100vw - 1200px) / 2));
+  color: #fff;
+  background: #172554;
+}
+
+.brand-mark {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid #93c5fd;
+  border-radius: 14px;
+  color: #dbeafe;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.topbar h1, .intro h2, .column-heading h3, .task-title, p { margin-top: 0; }
+.topbar h1 { margin-bottom: 0; font-size: 21px; }
+.eyebrow { margin: 0 0 5px; font-size: 10px; font-weight: 800; letter-spacing: .14em; }
+.topbar .eyebrow { color: #bfdbfe; }
+.topbar-note { margin: 0 0 0 auto; color: #dbeafe; font-size: 13px; }
+
+.page-shell { width: min(1200px, calc(100% - 40px)); margin: 36px auto; }
+.intro { display: grid; grid-template-columns: minmax(240px, .8fr) minmax(420px, 1.2fr); gap: 28px; align-items: start; margin-bottom: 28px; }
+.intro h2 { margin-bottom: 8px; color: #172554; font-size: clamp(25px, 3vw, 36px); }
+.intro-copy { max-width: 440px; color: #53627d; line-height: 1.6; }
+.intro .eyebrow { color: #2563eb; }
+
+.task-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 18px; border: 1px solid #dbe3f0; border-radius: 16px; background: #fff; box-shadow: 0 10px 28px #1725540c; }
+.task-form label { display: grid; gap: 6px; color: #52617a; font-size: 12px; font-weight: 700; }
+.task-form input, .task-form select, .task-form textarea, .status-control select { width: 100%; border: 1px solid #cbd5e1; border-radius: 9px; padding: 9px 10px; color: #172033; background: #fff; font: inherit; }
+.task-form textarea { resize: vertical; }
+.wide-field { grid-column: 1 / -1; }
+.task-form button { justify-self: start; border: 0; border-radius: 9px; padding: 10px 16px; color: #fff; background: #2563eb; font: inherit; font-weight: 700; cursor: pointer; }
+.task-form button:hover { background: #1d4ed8; }
+.form-message { align-self: center; margin: 0; color: #166534; font-size: 12px; }
+
+.board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.board-column { min-height: 250px; padding: 14px; border: 1px solid #dbe3f0; border-radius: 15px; background: #e9eef7; }
+.column-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.column-heading h3 { margin: 0; color: #253451; font-size: 15px; }
+.count { display: grid; min-width: 24px; height: 24px; place-items: center; border-radius: 99px; color: #334155; background: #d6dfed; font-size: 11px; font-weight: 700; }
+.task-list { display: grid; gap: 10px; }
+.task-card { padding: 13px; border: 1px solid #d7dfec; border-left: 4px solid #94a3b8; border-radius: 11px; background: #fff; box-shadow: 0 3px 10px #1725540a; }
+.priority-high { border-left-color: #ef4444; }
+.priority-medium { border-left-color: #f59e0b; }
+.priority-low { border-left-color: #22c55e; }
+.task-title { margin-bottom: 7px; color: #1e293b; font-size: 14px; line-height: 1.4; }
+.task-description { margin-bottom: 10px; color: #64748b; font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
+.task-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; }
+.team-chip { padding: 4px 7px; border-radius: 99px; color: #1d4ed8; background: #dbeafe; font-size: 10px; font-weight: 700; }
+.due-date { color: #64748b; font-size: 10px; }
+.status-control { display: block; }
+.status-control select { padding: 7px 8px; color: #334155; font-size: 11px; }
+.empty-state { margin: 4px 0; padding: 22px 8px; color: #8492a8; text-align: center; font-size: 12px; }
+.board-message { min-height: 20px; margin: 10px 0; color: #b91c1c; font-size: 13px; }
+.footer { padding: 18px 20px; color: #7b8799; text-align: center; font-size: 11px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+
+@media (max-width: 850px) {
+  .intro { grid-template-columns: 1fr; }
+  .board { grid-template-columns: 1fr; }
+  .topbar-note { display: none; }
+}
+
+@media (max-width: 520px) {
+  .page-shell { width: min(100% - 24px, 1200px); margin: 22px auto; }
+  .topbar { padding: 14px 16px; }
+  .task-form { grid-template-columns: 1fr; }
+  .wide-field { grid-column: auto; }
+}

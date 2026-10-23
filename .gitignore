@@ -1,0 +1,10 @@
+.work/
+.ci-runner-output/
+deploy/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+data/tasks.json
+*.log
+

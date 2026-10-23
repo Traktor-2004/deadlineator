@@ -1,0 +1,28 @@
+name: Сборка на локальном компьютере
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test-package:
+    runs-on: [self-hosted, Windows, X64, deadlineator]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Проверить исходный код
+        shell: powershell
+        run: py -3 -m compileall -q src scripts tests
+      - name: Запустить модульные тесты
+        shell: powershell
+        run: py -3 -m unittest discover -s tests -v
+      - name: Подготовить архив приложения
+        shell: powershell
+        run: |
+          New-Item -ItemType Directory -Path deploy -Force | Out-Null
+          Compress-Archive -Path src, scripts, data/demo_tasks.json, README.md -DestinationPath deploy/deadlineator.zip -Force
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deadlineator-windows
+          path: deploy/deadlineator.zip

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "task-01",
+    "title": "Уточнить MVP и критерии готовности",
+    "description": "Согласовать сценарии работы планировщика и критерии приёмки.",
+    "due_date": "2026-10-18",
+    "priority": "high",
+    "team": "Core",
+    "status": "done"
+  },
+  {
+    "id": "task-02",
+    "title": "Реализовать модель и валидацию задачи",
+    "description": "Проверять название, дату, приоритет, команду и статус.",
+    "due_date": "2026-10-20",
+    "priority": "high",
+    "team": "Core",
+    "status": "done"
+  },
+  {
+    "id": "task-03",
+    "title": "Добавить локальное JSON-хранилище",
+    "description": "Сохранять задачи между запусками без внешней базы данных.",
+    "due_date": "2026-10-27",
+    "priority": "medium",
+    "team": "Core",
+    "status": "done"
+  },
+  {
+    "id": "task-04",
+    "title": "Реализовать HTTP API задач",
+    "description": "Выдача списка, создание задачи и смена статуса через API.",
+    "due_date": "2026-10-30",
+    "priority": "high",
+    "team": "Core",
+    "status": "done"
+  },
+  {
+    "id": "task-05",
+    "title": "Сделать форму и канбан-доску",
+    "description": "Показывать задачи в колонках «Бэклог», «В работе» и «Готово».",
+    "due_date": "2026-10-25",
+    "priority": "high",
+    "team": "Web",
+    "status": "done"
+  },
+  {
+    "id": "task-06",
+    "title": "Подключить интерфейс к API",
+    "description": "Загружать список задач и отправлять изменения статусов.",
+    "due_date": "2026-11-12",
+    "priority": "high",
+    "team": "Web",
+    "status": "done"
+  },
+  {
+    "id": "task-07",
+    "title": "Добавить тесты модели и хранилища",
+    "description": "Проверить валидацию, сортировку, сохранение и смену статусов.",
+    "due_date": "2026-11-05",
+    "priority": "high",
+    "team": "QA",
+    "status": "done"
+  },
+  {
+    "id": "task-08",
+    "title": "Настроить pipeline GitFlic CI",
+    "description": "Добавить конфигурацию запуска тестов на локальном Windows Runner.",
+    "due_date": "2026-11-18",
+    "priority": "high",
+    "team": "Core",
+    "status": "in_progress"
+  },
+  {
+    "id": "task-09",
+    "title": "Провести интеграционную регрессию",
+    "description": "Проверить основной сценарий от создания задачи до сохранения.",
+    "due_date": "2026-11-20",
+    "priority": "medium",
+    "team": "QA",
+    "status": "backlog"
+  },
+  {
+    "id": "task-10",
+    "title": "Подготовить сценарий защиты проекта",
+    "description": "Показать Wiki, задачи, квартальный план, приложение и CI/CD.",
+    "due_date": "2026-12-04",
+    "priority": "medium",
+    "team": "QA",
+    "status": "backlog"
+  }
+]
